@@ -1,0 +1,44 @@
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a [routerLink]="['/typescript-demo']" routerLinkActive="router-link-active"> Type Scipt
+            Demo</a></li>
+        <li><a [routerLink]="['/directives-demo']" routerLinkActive="router-link-active">Directives demo</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-2 sidenav hidden-xs">
+      <h2>Logo</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <ul class="nav navbar-nav">
+          <!-- <li><a [routerLink]="['/pipes-demo']" routerLinkActive="router-link-active">Pipes demo</a></li>
+          <li><a [routerLink]="['/dashboard']" routerLinkActive="router-link-active">Dashboard</a></li>
+          <li><a [routerLink]="['/typescript-demo']" routerLinkActive="router-link-active">Typescript Demo</a></li>
+          <li><a [routerLink]="['/data-binding-demo']" routerLinkActive="router-link-active">Data Binding Demo</a></li>
+          <li><a [routerLink]="['/directives-demo']" routerLinkActive="router-link-active">Directives Demo</a></li> -->
+          <li *ngFor="let item of menu">
+            <a [routerLink]="['/', item.value]" routerLinkActive="router-link-active">{{item.name}}</a>
+          </li>
+        </ul>
+      </ul><br>
+    </div>
+    <br>
+    <div class="col-sm-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<p>data-binding works!</p>
+
+
+<h3> 1. One Way data binding</h3>
+
+<p>oneWayDataBinding Value : {{oneWayDataBinding}} </p>
+
+<h3> 2. Two Way data binding</h3>
+
+<p>oneWayDataBinding Value : {{twoWayDataBinding}} </p>
+
+<input [ngStyle]="{'color': 'blue'}" [type]="propertyBindingText" src=" " step=" " class=" " name=" twoWay"
+  [(ngModel)]="twoWayDataBinding">
+
+
+<h3>3. Event Binding</h3>
+
+<button (contextmenu)="rightClicked()" (dblclick)="someMethodDblClicked()" (click)="someMethodClicked()"> Click here
+</button>
+
+<div [ngClass]="isRed ? 'red' : 'green'">
+
+  Change my color
+</div>
+
+<div [ngClass]="changeColorNumber > 10 ? 'red' : 'green'">
+
+  Change my color by entering some number
+</div>
+
+<input type="number" name="colorNum" [(ngModel)]="changeColorNumber">
+
+
+<div [ngStyle]=" {'color': isRed ? 'blue' : 'red'}"> Hello style</div>
+
+<div [ngStyle]="{'background-color':changeColorNumber < 2? 'blue':'red' }">Hello new style</div>
+
+<!-- Style binding  & class binding  -->
+<!-- & ngStyle & ngClass -->
+<!-- also use ternary operator -->

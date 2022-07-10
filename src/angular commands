@@ -1,0 +1,2 @@
+1. create new project : ng new project name
+2. create new component: ng generate component component-name

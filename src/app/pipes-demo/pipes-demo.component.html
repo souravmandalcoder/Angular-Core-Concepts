@@ -1,0 +1,32 @@
+<p>pipes-demo works!</p>
+
+<h3>Built in Pipes</h3>
+
+<p> Original Date : {{joiningDate}}</p>
+
+<p> 1: Date Pipe Default: {{joiningDate | date}}</p>
+
+<p> 2: Date Pipe small: {{joiningDate | date:'MMM d, y, h:mm:ss a'}}</p>
+
+
+<h3>Custom Pipe</h3>
+
+
+<p> {{testPipe | rupee | lowercase }}</p>
+
+
+
+<h3> Pupe/Impure Pipes</h3>
+
+<p>Original List : {{originalList}}</p>
+
+
+<p>Original List Pure sort : {{originalList | pureSort}}</p>
+
+
+<p>Original List Impure sort : {{originalList | impureSort}}</p>
+
+
+<input type="number" [(ngModel)]="insertNum" name="" id="">
+
+<button (click)="insertNumber()">Insert Number</button>

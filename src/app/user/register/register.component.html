@@ -1,0 +1,30 @@
+<p>register works!</p>
+
+<h3>Register Form with Reactive</h3>
+
+<form [formGroup]="registerForm" action="">
+  <input type="text" formControlName="fname">
+  <div *ngIf="isSubmitted && registerForm.invalid">
+    <div *ngIf="f.fname.errors.required">Fname is required</div>
+    <div *ngIf="f.fname.errors.minlength">Fname minlength should be > 10</div>
+  </div>
+  <button (click)="onSubmit()"> Submit</button>
+
+</form>
+<div *ngIf="errorMessage">
+  Please resolve all the errors above
+</div>
+
+<input type="text" [formControl]="lname">
+
+<p>
+  Lastname : {{lname.value}}
+</p>
+
+<p>
+  Complete Form : {{this.registerForm.value | json}}
+</p>
+
+<p>
+  Firstname: {{this.registerForm.value.fname}}
+</p>

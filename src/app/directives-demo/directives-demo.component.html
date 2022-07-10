@@ -1,0 +1,75 @@
+<h3>
+  Directives
+</h3>
+
+<p>1. Component </p>
+
+<p> Component is a directiv with a view</p>
+
+<p>2. Structural </p>
+<p>
+  ngif , ngfor, ngswitch
+</p>
+
+<h4>ngIf</h4>
+<p *ngIf="false">
+  Ng if is false
+</p>
+
+<ng-container *ngIf="false; else elseTemplate">
+  If is true
+</ng-container>
+<ng-template #elseTemplate>
+  If is false
+</ng-template>
+
+<p [hidden]="false">
+  hidden is false
+</p>
+
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let item of items; let i=index" class="col-md-2 color-blue">
+
+      <div class="cursor-pointer" (click)="selectEmployee(item)">
+        Count: {{item}} ---- {{ i + 1}}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<h3 appHighlight>Switch case</h3>
+
+<div [ngSwitch]="viewDetails">
+  <div *ngSwitchCase="'chetan'">
+    I am chetan
+  </div>
+  <div *ngSwitchCase="'atul'"> I am atul</div>
+  <div *ngSwitchCase="'saylee'"> I am saylee</div>
+  <div *ngSwitchCase="'priya'"> I am priya</div>
+  <div *ngSwitchDefault> I am john </div>
+</div>
+
+
+<p>3. Attribute : Built in and Custom directives </p>
+<p appHighlight>
+  Changing behaiour of Dom mostly style related, Properties, Atttributes
+</p>
+
+<p appHighlight>
+  Changing behaiour of Dom mostly style related, Properties, Atttributes
+</p>
+
+<p appHighlight>
+  Changing behaiour of Dom mostly style related, Properties, Atttributes
+</p>
+
+<h3> Custom directives</h3>
+
+<p appHighlight>Highlight Me !</p>
+
+<p #viewParaRef>
+  test div for view child
+</p>

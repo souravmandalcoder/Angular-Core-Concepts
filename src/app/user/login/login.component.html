@@ -1,0 +1,35 @@
+ <!-- <div fxLayout="row wrap" class="bg-yellow login-height" fxLayoutAlign="center center" fxFlex="100">
+   <div fxLayout="row wrap" class="login-box" fxLayoutAlign="center start" fxFlex="40">
+     <div fxLayout="row wrap" fxLayoutAlign="center start" fxFlex="100">
+       <mat-form-field>
+         <input matInput autocomplete="off" placeholder="Username">
+       </mat-form-field>
+     </div>
+     <div fxLayout="row wrap" fxLayoutAlign="center start" fxFlex="100">
+       <mat-form-field>
+         <input matInput type="password" placeholder="Password">
+       </mat-form-field>
+     </div>
+   </div>
+ </div> -->
+
+ <h3>Login Form with Template driven Forms</h3>
+
+ <form action="" (ngSubmit)="onSubmit(f)" name="f" #f=ngForm>
+   <mat-form-field>
+     <label for="">Enter Username</label>
+     <input type="text" matInput name="uname" [(ngModel)]="user.username" #uname="ngModel" required email
+       minlength="10">
+   </mat-form-field>
+   <div *ngIf="f.submitted && uname.invalid" class="is-invalid">
+     <div *ngIf="uname.errors.required">Fname is required</div>
+     <div *ngIf="uname.errors.email">Email must be a valid email address</div>
+     <div *ngIf="uname.errors.minlength">Email must more than 10 letters</div>
+   </div>
+
+
+   <button>Submit</button>
+   <button>Cancel</button>
+
+
+ </form>

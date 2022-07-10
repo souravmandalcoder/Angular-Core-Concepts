@@ -1,0 +1,67 @@
+{
+  "employees": [
+    {
+      "name": "jefftest",
+      "address": "usa",
+      "phone": "0999",
+      "company": "amazon",
+      "id": 5
+    },
+    {
+      "name": "bill",
+      "address": "gates",
+      "phone": "888",
+      "company": "test",
+      "id": 6
+    },
+    {
+      "name": "rahul",
+      "address": "mumbai",
+      "phone": "777",
+      "company": "3ri",
+      "id": 7
+    },
+    {
+      "name": "suyog",
+      "address": "new",
+      "phone": "333",
+      "company": "3ri",
+      "id": 8
+    },
+    {
+      "name": "chetan",
+      "address": "pune",
+      "phone": "999999",
+      "company": "hsbc",
+      "id": 10
+    },
+    {
+      "id": 11
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "roles": [
+    {
+      "roleId": 10,
+      "name": "manager"
+    },
+    {
+      "roleId": 20,
+      "name": "developer"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+<p>parent-demo works!</p>
+
+<p>
+  Variable Value in Parent Component : {{someVariableInParentComponent}}
+</p>
+
+<p>
+  Number received from Child : {{receivedNumber}}
+</p>
+
+<button (click)="detectChanges()">click here</button>
+
+
+<app-child-demo [someAttributeInParentComponent]="someVariableInParentComponent"
+  [secondAttributeInParentComponent]="someVariableInParentComponent" (eventInChild)="someMethodInParent($event)">
+</app-child-demo>
+
+<app-child2></app-child2>
