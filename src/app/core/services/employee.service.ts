@@ -24,7 +24,7 @@ export class EmployeeService {
   }
 
   // Observable : next, error, complete
-  // oberver : subscribe
+  // observer : subscribe
 
   // Subject  : Observable + Observer;
   // browser -->   api call -- > web api -- > db

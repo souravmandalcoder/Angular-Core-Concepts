@@ -96,13 +96,6 @@ export class TypescriptDemoComponent implements OnInit {
 
     this.newArr.push(addNewItem);
 
-
-
-
-
-
-
-
     // this.testMethod();  
     // this.arrNumbers = this.arrNumbers.sort((a, b) => a - b);
     // sort array of string;
